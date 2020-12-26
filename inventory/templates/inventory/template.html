@@ -7,7 +7,8 @@
 	{% block title %}<title>TurboSports</title>{% endblock %}
 	<link rel="stylesheet" href="{% static 'css/style.css' %}?v=<?php echo(rand()); ?>">
 	<link rel="stylesheet" href="{% static 'css/home.css' %}?v=<?php echo(rand()); ?>">
-	<link rel="stylesheet" href="{% static 'css/dropdown.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="{% static 'css/dropdown_profile.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="{% static 'css/dropdown_category.css' %}?v=<?php echo(rand()); ?>">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 	<script src="{% static 'js/dropdown.js' %}?v=<?php echo(rand()); ?>"></script>
@@ -19,11 +20,39 @@
 	  	</li>
 
 	  	<li>
-
+	  		<a class="category category_primary" href="">Primary
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
 	  	</li>
 
 	  	<li>
+	  		<a class="category" href="">Secondary
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
 
+	  	<li>
+	  		<a class="category" href="">Melee
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li>
+	  		<a class="category" href="">Warframe
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li>
+	  		<a class="category" href="">Companion
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li>
+	  		<a class="category" href="">Archwing
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
 	  	</li>
 
 	  	<li class= "derecha" style="float:right">
@@ -36,6 +65,14 @@
 		  		</a>
 	  	</li>
 
+	</div>
+
+	<div class="dropdown_category dropdown_category_primary">
+		<a class="drop_btn" href="">Bow</a>
+		<a class="drop_btn" href="">Rifle</a>
+		<a class="drop_btn" href="">Shotgun</a>
+		<a class="drop_btn" href="">Sniper</a>
+		<a class="drop_btn" href="">Zhuge</a>
 	</div>
 
 	<div id="myDropdown" class="dropdown-content">
