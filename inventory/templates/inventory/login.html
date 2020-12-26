@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><link rel="icon" type="image/ico" href="{% static 'img/icon/favicon.ico' %}?v=<?php echo(rand()); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prime Inventory - Login</title>
+	<link rel="stylesheet" href="{% static 'css/login.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div class="content">
+		<form method="POST" id="login_form">{% csrf_token %}
+			{% if user.is_authenticated %}
+				<meta http-equiv = "refresh" content = "2; url = ../" />
+			{% else %}
+				<p>Username:</p>
+				<div class="field-container">
+					<i class="fa fa-user-circle icono" aria-hidden="true"></i>
+					<input type="text" class="field" placeholder="username" name="username"> <br/>
+				</div>
+
+				<p>Password:</p>
+				<div class="field-container">
+					<i class="fa fa-key fa-lg" aria-hidden="true"></i>
+					<input type="password" class="field" placeholder="*******" name="password"> <br/>
+				</div>
+				<p class="center-content">
+					<input type="submit" class="btn btn-black" value="Login" name="login_btn"> <br/><br/>
+				</p>
+			{% endif %}
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* [Dropdown Profile] */
+
+.dropdown {
+  display             : inline-block;
+}
+.dropdown-content {
+  position            : fixed;
+  top                 : 50px;
+  right               : 0;
+  display             : none;
+  float               : right;
+  background-color    : #111;
+  min-width           : 160px;
+  box-shadow          : 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index             : 200;
+}
+.drop_btn{
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+.drop_btn:hover{
+  background-color: #333;
+}
+.show {
+  display             : block;
+}
+
+@media screen and (max-width: 768px){
+  .cat_texto,
+  .contenelogin h4,
+  .busqueda,
+  .search_container button{
+    font-size           : 70%;
+    font-weight         : normal;
+  }
+  .busqueda{
+    padding-right       : 10px;
+  }
+  .contenelogin img{
+    width               : 20%;
+  }
+  .contenelogin{
+    margin              : 25px 5px 25px 0px;
+  }
+}
+
+/* Login Button */
+#login_form p{
+  color: white;
+  margin-left:20px;
+}
+
+.field{
+  border: solid 1px #ccc;
+  border-radius: 0 4px 4px 0;
+  padding: 9px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.field:focus{
+  border-color: #18A383;
+}
+.center-content{
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+.field-container div{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.field-container i{
+  background-color: #eee;
+  border-radius: 4px 0 0 4px;
+  color: #888;
+  padding: 10px 10px 11px 10px;
+  border: solid 1px #ccc;
+  height: 12px;
+  margin-right: -5px;
+  margin-left: 20px;
+  vertical-align: top;
+}
+.btn{
+  border-radius: 3px;
+  display: inline-block;
+  padding: 8px 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  width: auto;
+}
+
+.btn-black{
+  color: #ddd;
+  background-color: #222;
+}
+.btn-black:hover{
+  background-color: #333;
+  transform           : scale(1.05);
+  text-shadow: none;
+  box-shadow: none;
+}
+.btn-black:active{
+  background-color: #444;
+}
+.bottom_p {
+  color: white;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.bottom_p a:visited {
+  color: #c054ff;
+}

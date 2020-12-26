@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+	background-color: #2e2e2e;
+	background-image: url(../img/Melee.jpg);
+	background-position   : center;
+	background-repeat     : no-repeat;
+	background-attachment : fixed;
+
+}
+.content{
+	background-color: #2e2e2e;
+  color: #878624;
+	margin: 15% 40%;
+	border-radius: 30px;
+	padding: 30px 30px 5px 30px;
+	-webkit-box-shadow: inset 0px 0px 37px -19px rgba(0,0,0,1);
+	-moz-box-shadow: inset 0px 0px 37px -19px rgba(0,0,0,1);
+	box-shadow: inset 0px 0px 37px -19px rgba(0,0,0,1);
+	border: 1px solid black;
+}
+
+#login_form p{
+  -webkit-text-stroke: 0.2px black;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.field{
+  border: solid 1px #ccc;
+  border-radius: 0 4px 4px 0;
+  padding: 9px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.field:focus{
+  border-color: #18A383;
+}
+
+.center-content{
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+.field-container div{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.field-container i{
+  background-color: #eee;
+  border-radius: 4px 0 0 4px;
+  color: #888;
+  padding: 10px 10px 11px 10px;
+  border: solid 1px #ccc;
+  height: 12px;
+  margin-right: -5px;
+  margin-left: 5px;
+  vertical-align: top;
+}
+.btn{
+  border-radius: 3px;
+  display: inline-block;
+  padding: 8px 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  width: auto;
+}
+
+.btn-black{
+  color: #ddd;
+  background-color: #222;
+}
+.btn-black:hover{
+  background-color: #333;
+  transform           : scale(1.05);
+  text-shadow: none;
+  box-shadow: none;
+}
+.btn-black:active{
+  background-color: #444;
+}
+.bottom_p {
+  color: white;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.bottom_p a:visited {
+  color: #c054ff;
+}
