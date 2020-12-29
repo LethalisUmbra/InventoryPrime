@@ -1,8 +1,26 @@
+*{
+	cursor: url(../img/puntero_dorado.png), auto;
+}
 .content{
 	margin-top: 25%;
-	padding: 10% 20%;
+	padding: 50px 20% 10%;
 	background-color: #fff;
 }
 footer{
 	vertical-align: bottom;
+}
+h2{
+	color: #ac9e12;
+}
+
+.category_link:link{
+	color: #ac9e12;
+	text-decoration: none;
+}
+.category_link:hover,
+.category_link:active{
+	color: #665e00;
+}
+.category_link:visited{
+	color: #ac9e12;
 }
