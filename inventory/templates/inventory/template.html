@@ -19,93 +19,115 @@
 	  		<a class="logo" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
 	  	</li>
 
+	  	<li class="category_holder">
+	  		<a class="category" href="">PRIMARY
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  		<div class="dropdown dropcat dropcat_primary">
+				<hr class="separator">
+				<a class="drop_btn btn_cat" href="">Bow</a>
+				<a class="drop_btn btn_cat" href="">Rifle</a>
+				<a class="drop_btn btn_cat" href="">Shotgun</a>
+				<a class="drop_btn btn_cat" href="">Sniper</a>
+				<a class="drop_btn btn_cat" href="">Zhuge</a>
+			</div>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category" href="">SECONDARY
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  		<div class="dropdown dropcat dropcat_secondary">
+				<hr class="separator">
+				<a class="drop_btn" href="">Ballista</a>
+				<a class="drop_btn" href="">AK</a>
+				<a class="drop_btn" href="">Dual</a>
+				<a class="drop_btn" href="">Thrown</a>
+				<a class="drop_btn" href="">Shotgun Sidearm</a>
+				<a class="drop_btn" href="">Pistol</a>
+			</div>
+	  	</li>
+
 	  	<li>
-	  		<a class="category category_primary" href="">Primary
+	  		<a class="category" href="">MELEE
 	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
 	  		</a>
 	  	</li>
 
 	  	<li>
-	  		<a class="category" href="">Secondary
+	  		<a class="category" href="">WARFRAME
 	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
 	  		</a>
 	  	</li>
 
 	  	<li>
-	  		<a class="category" href="">Melee
+	  		<a class="category" href="">COMPANION
 	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
 	  		</a>
 	  	</li>
 
 	  	<li>
-	  		<a class="category" href="">Warframe
+	  		<a class="category" href="">ARCHWING
 	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
 	  		</a>
 	  	</li>
 
-	  	<li>
-	  		<a class="category" href="">Companion
-	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
-	  		</a>
+	  	<li class="official_page" style="float:right">
+	  		<a class="category official_text " href="https://www.warframe.com">OFFICIAL PAGE</a>
 	  	</li>
 
-	  	<li>
-	  		<a class="category" href="">Archwing
-	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  	<li class="derecha" style="float:right">
+	  		<a class="profile, contenelogin" onclick="profileFunction()">
+	  			{% if user.is_authenticated %}
+					<h4 class="profile">{{ user.username|upper }}</h4>
+				{% else %}
+					<h4 class="profile">LOGIN</h4>
+				{% endif %}
+				<img class="profileimg" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
 	  		</a>
+	  		<div id="dropdown_profile" class="dropdown-content">
+				<hr class="separator">
+				{% if user.is_authenticated %}
+					<a href="http://127.0.0.1:8000/profile" class="drop_btn">Profile</a>
+			     	<a href="{% url 'logout' %}" class="drop_btn">Log out</a>
+			     {% else %}
+			     	<div>
+			     		<form method="POST" id="login_form">{% csrf_token %}
+							<p>USERNAME:</p>
+							<div class="field-container">
+								<i class="fa fa-user-circle icono" aria-hidden="true"></i>
+								<input type="text" class="field" placeholder="username" name="username"> <br/>
+							</div>
+
+							<p>PASSWORD:</p>
+							<div class="field-container">
+								<i class="fa fa-key fa-lg" aria-hidden="true"></i>
+								<input type="password" class="field" placeholder="*******" name="password"> <br/>
+							</div>
+							<p class="center-content">
+								<input type="submit" class="btn btn-black" value="LOG IN" name="login_btn"> <br/><br/>
+							</p>
+						</form>
+			     	</div>
+
+				{% endif %}
+		    </div>
 	  	</li>
 
-	  	<li class= "derecha" style="float:right">
-		  		<a class="profile, contenelogin" onclick="dropFunction()">
-		  			{% if user.is_authenticated %}
-						<h4 class="profile">{{ user.username }}</h4>
-					{% else %}
-						<h4 class="profile">LOGIN</h4>
-					{% endif %}
-		  		</a>
-	  	</li>
 
 	</div>
 
-	<div class="dropdown_category dropdown_category_primary">
-		<a class="drop_btn" href="">Bow</a>
-		<a class="drop_btn" href="">Rifle</a>
-		<a class="drop_btn" href="">Shotgun</a>
-		<a class="drop_btn" href="">Sniper</a>
-		<a class="drop_btn" href="">Zhuge</a>
-	</div>
 
-	<div id="myDropdown" class="dropdown-content">
-		{% if user.is_authenticated %}
-			<a href="http://127.0.0.1:8000/profile" class="drop_btn">Profile</a>
-	     	<a href="{% url 'logout' %}" class="drop_btn">Log out</a>
-	     {% else %}
-	     	<div>
-	     		<form method="POST" id="login_form">{% csrf_token %}
-					<p>USERNAME:</p>
-					<div class="field-container">
-						<i class="fa fa-user-circle icono" aria-hidden="true"></i>
-						<input type="text" class="field" placeholder="username" name="username"> <br/>
-					</div>
 
-					<p>PASSWORD:</p>
-					<div class="field-container">
-						<i class="fa fa-key fa-lg" aria-hidden="true"></i>
-						<input type="password" class="field" placeholder="*******" name="password"> <br/>
-					</div>
-					<p class="center-content">
-						<input type="submit" class="btn btn-black" value="LOG IN" name="login_btn"> <br/><br/>
-					</p>
-				</form>
-	     	</div>
 
-		{% endif %}
-    </div>
+
+
 
 	{% block content %}
 		Body content
 	{% endblock %}
 
+	<!-- Sticky navbar -->
 	<script>
 		window.onscroll = function() {myFunction()};
 

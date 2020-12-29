@@ -6,7 +6,7 @@
 .dropdown-content {
   position            : fixed;
   top                 : 50px;
-  right               : 0;
+  right               : 180px;
   display             : none;
   float               : right;
   background-color    : #111;
