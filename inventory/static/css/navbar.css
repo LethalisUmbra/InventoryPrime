@@ -132,12 +132,6 @@
 
 .official_img{
   display               : none;
-  text-align            : center;
-  padding               : 10px;
-  max-width             : 100%;
-  max-height            : 30px;
-  margin                : 0;
-  margin-left           : 0px;
 }
 
 @media screen and (max-width: 1400px){
@@ -145,7 +139,6 @@
     height                : 30px;
     font-size             : 8px;
   }
-
   /* Categories content */
   .category_holder{
     height                : 30px;
@@ -181,21 +174,16 @@
   }
   .logo_container{
     height                : 30px;
+    width                 : 60px;
   }
 
   /* Login container & content */
   .contenelogin h4,
   .contenelogin img{
     font-size             : 8px;
-    display               : inline-block;
-    vertical-align        : middle;
-  }
-  .contenelogin h4{
-    padding               : 0;
-    margin                : 0;
+    font-weight           : normal;
   }
   .derecha{
-    width                 : auto;
     margin-right          : 5px;
     height                : 50px;
   }
@@ -203,10 +191,10 @@
   /* Official page redirect content */
   .official_img{
     display               : block;
+    padding               : 5px 8px;
     text-align            : center;
-    padding               : 3px;
     max-width             : 100%;
-    max-height            : 24px;
+    max-height            : 20px;
     margin                : 0;
     margin-left           : 0px;
   }

@@ -29,26 +29,6 @@
   display             : block;
 }
 
-@media screen and (max-width: 768px){
-  .cat_texto,
-  .contenelogin h4,
-  .busqueda,
-  .search_container button{
-    font-size           : 70%;
-    font-weight         : normal;
-  }
-  .busqueda{
-    padding-right       : 10px;
-  }
-  .contenelogin img{
-    width               : 20%;
-  }
-  .contenelogin{
-    margin              : 25px 5px 25px 0px;
-  }
-
-}
-
 /* Login Button */
 #login_form p{
   color: white;
@@ -110,11 +90,37 @@
 .btn-black:active{
   background-color: #444;
 }
-.bottom_p {
-  color: white;
-  margin-left: 5px;
-  font-size: 12px;
-}
-.bottom_p a:visited {
-  color: #c054ff;
+
+@media screen and (max-width: 1400px){
+  .dropdown-content {
+    top                 : 30px;
+    right               : 50px;
+    min-width           : 120px;
+  }
+  .drop_btn{
+    font-size: 8px;
+    font-weight: bold;
+    padding: 10px 10px;
+  }
+
+  /* Login Button */
+  #login_form p{
+    margin-left:5px;
+  }
+  .field{
+    font-size: 8px;
+    padding: 5px 5px;
+  }
+  .center-content{
+    margin: 10px 0 0 0;
+  }
+  .field-container i{
+    padding: 6px 7px 5px 5px;
+    height: 8px;
+    margin-left: 10px;
+  }
+  .btn{
+    font-size: 8px;
+    padding: 6px 4px;
+  }
 }

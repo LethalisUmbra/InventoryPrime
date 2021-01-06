@@ -21,6 +21,20 @@
   font-size: 12px;
 }
 
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 1400px){
+  .dropcat {
+    top                 : 25px;
+    min-width           : 120px;
+    box-shadow          : 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index             : 200;
+  }
+  .dropcat_primary{
+    left                : 60px;
+  }
+  .dropcat_secondary{
+    left                : 150px;
+  }
+  .btn_cat{
+    font-size: 8px;
+  }
 }
