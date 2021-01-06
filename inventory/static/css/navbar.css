@@ -22,56 +22,30 @@
   padding-top           : 60px;
 }
 
+/* Categories content */
 .category_holder{
   height                : 50px;
 }
 
 .category,
-.contenelogin{
+.contenelogin,
+.official_link{
   display               : block;
   color                 : white;
-  text-align            : right;
   text-decoration       : none;
-  padding               : 0;
   -moz-user-select      : none;
   -webkit-user-select   : none;
   -ms-user-select       : none;
   user-select           : none;
-  margin                : 15px 5px;
   cursor                : pointer;
 }
 
-.contenelogin h4,
-.contenelogin img{
-  font-size             : 12px;
-  display               : inline-block;
-  vertical-align        : middle;
-}
-
-.contenelogin h4{
+.category,
+.contenelogin{
+  margin                : 15px 5px;
   padding               : 0;
-  margin                : 0;
+  text-align            : right;
 }
-.logo img:hover{
-	transform             : scale(1.05);
-}
-.logo img{
-  text-align            : center;
-  padding               : 10px;
-  max-width             : 100%;
-  max-height            : 100%;
-  margin                : 0;
-  margin-left           : 9px;
-}
-.logo_container{
-  height                : 30px;
-}
-.derecha{
-  width                 : auto;
-  margin-right          : 10px;
-  height                : 50px;
-}
-
 .category{
   float                 : left;
   overflow              : hidden;
@@ -88,6 +62,41 @@
   vertical-align        : bottom;
   margin                : 0 0 0 2px;
 }
+
+/* Logo image & its container*/
+.logo img:hover{
+	transform             : scale(1.05);
+}
+.logo img{
+  text-align            : center;
+  padding               : 10px;
+  max-width             : 100%;
+  max-height            : 100%;
+  margin                : 0;
+  margin-left           : 9px;
+}
+.logo_container{
+  height                : 30px;
+}
+
+/* Login container & content */
+.contenelogin h4,
+.contenelogin img{
+  font-size             : 12px;
+  display               : inline-block;
+  vertical-align        : middle;
+}
+.contenelogin h4{
+  padding               : 0;
+  margin                : 0;
+}
+.derecha{
+  width                 : auto;
+  margin-right          : 10px;
+  height                : 50px;
+}
+
+/* Official page redirect content */
 .official_page{
   width                 : 180px;
   background-color      : #ac9e12;
@@ -119,4 +128,108 @@
   max-height            : 17px;
   font-family           : inherit;
   vertical-align        : bottom;
+}
+
+.official_img{
+  display               : none;
+  text-align            : center;
+  padding               : 10px;
+  max-width             : 100%;
+  max-height            : 30px;
+  margin                : 0;
+  margin-left           : 0px;
+}
+
+@media screen and (max-width: 1400px){
+  #navbar {
+    height                : 30px;
+    font-size             : 8px;
+  }
+
+  /* Categories content */
+  .category_holder{
+    height                : 30px;
+  }
+
+  .category,
+  .contenelogin{
+    margin                : 7px 2px;
+  }
+  .category{
+    float                 : left;
+    overflow              : hidden;
+    display               : flex;
+    padding               : 0 5px;
+  }
+  .category img{
+    padding               : 0px 5px;
+    max-width             : 12px;
+    max-height            : 12px;
+  }
+
+  /* Logo image & its container*/
+  .logo img:hover{
+    transform             : scale(1.05);
+  }
+  .logo img{
+    text-align            : center;
+    padding               : 3px;
+    max-width             : 100%;
+    max-height            : 80%;
+    margin                : 0;
+    margin-left           : 9px;
+  }
+  .logo_container{
+    height                : 30px;
+  }
+
+  /* Login container & content */
+  .contenelogin h4,
+  .contenelogin img{
+    font-size             : 8px;
+    display               : inline-block;
+    vertical-align        : middle;
+  }
+  .contenelogin h4{
+    padding               : 0;
+    margin                : 0;
+  }
+  .derecha{
+    width                 : auto;
+    margin-right          : 5px;
+    height                : 50px;
+  }
+
+  /* Official page redirect content */
+  .official_img{
+    display               : block;
+    text-align            : center;
+    padding               : 3px;
+    max-width             : 100%;
+    max-height            : 24px;
+    margin                : 0;
+    margin-left           : 0px;
+  }
+  .official_page{
+    width                 : 50px;
+    background-color      : #ac9e12;
+    height                : 30px;
+  }
+  .official_text{
+    display: none
+  }
+
+  .separator{
+    border-color          : #ac9e12;
+    margin                : 0;
+    background-color      : #ac9e12;
+    height                : 1px;
+  }
+
+  .profileimg{
+    max-width             : 12px;
+    max-height            : 12px;
+  }
+
+
 }

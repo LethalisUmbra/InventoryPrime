@@ -18,7 +18,7 @@
   display: block;
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   padding: 15px 20px;
 }
@@ -46,6 +46,7 @@
   .contenelogin{
     margin              : 25px 5px 25px 0px;
   }
+
 }
 
 /* Login Button */
