@@ -95,6 +95,21 @@
   margin-right          : 10px;
   height                : 50px;
 }
+.register_container{
+  margin: 15px 15px 5px;
+}
+.register:link,
+.register:visited,
+.register:active,
+.register:hover{
+  color: #ac9e12;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+.register:hover{
+  color: #ffeb19;
+}
 
 /* Official page redirect content */
 .official_page{

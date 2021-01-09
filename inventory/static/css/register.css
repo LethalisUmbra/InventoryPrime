@@ -1,0 +1,92 @@
+body {
+	background-image: url(../img/Melee.jpg); /* Background image location */
+	background-position   : center center; /* Centered background*/
+	background-repeat     : no-repeat; /* Background image will not repeat */
+	background-attachment : fixed; /* background image will be fixed  */
+  background-size       : cover; /* auto-resizable background (depending on resolution*/
+	font-family           : 'Michroma', sans-serif;
+  letter-spacing        : 1px;
+  font-size             : 12px; /* Small font size so it'll be readable on small resolutions */
+}
+.content{
+  margin                : 10% auto 0;
+	width                 : 300px;
+	padding               : 15px 15px 5px 15px;
+	background-color      : #2e2e2e;
+  color                 : #ffeb19;
+  font-size             : 12px;
+  /* Border */
+	border                : 1px solid black;
+  border-radius         : 10px;
+	box-shadow            : inset 0px 0px 37px -19px rgba(0,0,0,1);
+	-webkit-box-shadow    : inset 0px 0px 37px -19px rgba(0,0,0,1);
+	-moz-box-shadow       : inset 0px 0px 37px -19px rgba(0,0,0,1);
+}
+.logo img:hover{
+  transform             : scale(1.05);
+}
+.logo img{
+	text-align            : center;
+	padding               : 10px;
+	max-width             : 50px;
+	max-height            : 50px;
+}
+.center-content{
+	margin                : 10px 0 0 0;
+	text-align            : center;
+}
+.btn{
+	border-radius         : 3px;
+	display               : inline-block;
+	padding               : 8px 5px;
+	text-decoration       : none;
+	width                 : auto;
+}
+.btn-black{
+	background-color      : #222;
+	color                 : #ddd;
+}
+.btn-black:hover{
+	background-color      : #333;
+	transform             : scale(1.05);
+	text-shadow           : none;
+	box-shadow            : none;
+}
+
+.register_container{
+	margin                : 15px 15px 5px;
+}
+.register:link,
+.register:visited,
+.register:active,
+.register:hover{
+	color                 : #ac9e12;
+	font-weight           : bold;
+	text-decoration       : none;
+	font-size             : 14px;
+}
+.register:hover{
+	color                 : #ffeb19;
+}
+.helptext{
+	color                 : #ac9e12;
+	display               : block;
+	font-size             : 10px;
+	margin                : 5px 0 10px 0;
+}
+label{
+	display               : block;
+}
+ul{
+	padding-left          : 15px;
+}
+li{
+	margin-bottom         : 2px;
+}
+h1{
+	margin                : 10px 0;
+}
+input{
+  width: 250px;
+  margin: 1px;
+}

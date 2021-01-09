@@ -7,9 +7,13 @@
 	<title>Prime Inventory - Login</title>
 	<link rel="stylesheet" href="{% static 'css/login.css' %}?v=<?php echo(rand()); ?>">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 
 </head>
 <body>
+	<a class="logo" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+
 	<div class="content">
 		<form method="POST" id="login_form">{% csrf_token %}
 			{% if user.is_authenticated %}
@@ -26,6 +30,11 @@
 					<i class="fa fa-key fa-lg" aria-hidden="true"></i>
 					<input type="password" class="field" placeholder="*******" name="password"> <br/>
 				</div>
+
+				<div class="register_container">
+					<a class="register" href="{% url 'register' %}">Sign Up</a>
+				</div>
+
 				<p class="center-content">
 					<input type="submit" class="btn btn-black" value="Login" name="login_btn"> <br/><br/>
 				</p>

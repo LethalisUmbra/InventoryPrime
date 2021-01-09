@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><link rel="icon" type="image/ico" href="{% static 'img/icon/favicon.ico' %}?v=<?php echo(rand()); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prime Inventory - Sign Up</title>
+	<link rel="stylesheet" href="{% static 'css/register.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<a class="logo" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+
+	<div class="content">
+		<form method="POST" id="register_form">{% csrf_token %}
+			{% if user.is_authenticated %}
+				<meta http-equiv = "refresh" content = "2; url = ../" />
+			{% else %}
+				<h1>Sign Up</h1>
+			    <hr>
+					<label for="id_username">Username:</label>
+					<input type="text" name="username" maxlength="24" minlength="4"  autocapitalize="none" autocomplete="username" autofocus required id="id_username">
+					<span class="helptext ht-username">Username must be between 4 and 24 characters.</span>
+					<label for="id_email">Email:</label>
+					<input type="email" name="email" maxlength="254" minlength="5" id="id_email">
+						<br>
+						<br>
+					<label for="id_password1">Password:</label>
+					<div class="cont_input">
+						<input type="password" name="password1" autocomplete="new-password" minlength="4" required id="id_password1">
+						<button type="button" id="eye_cont" tabindex="-1" onclick='passFunction("id_password1")'>
+							<i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+						</button>
+					</div>
+					<span class="helptext ht-password">
+						<ul>
+							<li> Must contain at least 4 characters. </li>
+							<li> Do not use the same password as in your original account</li>
+						</ul>
+					</span>
+					<label for="id_password2">Password (confirmation):</label>
+					<div class="cont_input">
+						<input type="password" name="password2" autocomplete="new-password" minlength="4"  required id="id_password2">
+						<button type="button" id="eye_cont" tabindex="-1" onclick='passFunction("id_password2")'>
+							<i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+						</button>
+					</div>
+					<span class="helptext ht-password2">To verify, enter the same password as above.</span>
+			    <hr>
+			    <p class="center-content">
+					<input type="submit" class="registerbtn btn btn-black" value="Sign me up" name="register_btn"> <br/><br/>
+				</p>
+			{% endif %}
+		</form>
+	</div>
+</body>
+<!-- Script to show password -->
+<script type="text/javascript">
+	function passFunction(field) {
+	  var x = document.getElementById(field);
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } else {
+	    x.type = "password";
+	  }
+	}
+</script>
+</html>
