@@ -31,40 +31,44 @@
 					<label for="id_password1">Password:</label>
 					<div class="cont_input">
 						<input type="password" name="password1" autocomplete="new-password" minlength="4" required id="id_password1">
-						<button type="button" id="eye_cont" tabindex="-1" onclick='passFunction("id_password1")'>
-							<i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+						<button type="button" id="eye_cont" tabindex="-1" onclick='passFunction("id_password1", "id_eye1")'>
+							<i class="fa fa-eye fa-lg" aria-hidden="true" id="id_eye1"></i>
 						</button>
 					</div>
 					<span class="helptext ht-password">
 						<ul>
 							<li> Must contain at least 4 characters. </li>
-							<li> Do not use the same password as in your original account</li>
+							<li> Do not use the same password as in your original account.</li>
 						</ul>
 					</span>
 					<label for="id_password2">Password (confirmation):</label>
 					<div class="cont_input">
 						<input type="password" name="password2" autocomplete="new-password" minlength="4"  required id="id_password2">
-						<button type="button" id="eye_cont" tabindex="-1" onclick='passFunction("id_password2")'>
-							<i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+						<button type="button" id="eye_cont" tabindex="-1" onclick='passFunction("id_password2", "id_eye2")'>
+							<i class="fa fa-eye fa-lg" aria-hidden="true" id="id_eye2"></i>
 						</button>
 					</div>
 					<span class="helptext ht-password2">To verify, enter the same password as above.</span>
-			    <hr>
 			    <p class="center-content">
 					<input type="submit" class="registerbtn btn btn-black" value="Sign me up" name="register_btn"> <br/><br/>
 				</p>
+				<hr>
+				<a href="{% url 'login' %}" class="login">Already have an account.</a>
 			{% endif %}
 		</form>
 	</div>
 </body>
 <!-- Script to show password -->
 <script type="text/javascript">
-	function passFunction(field) {
+	function passFunction(field, icon) {
 	  var x = document.getElementById(field);
+	  var y = document.getElementById(icon);
 	  if (x.type === "password") {
 	    x.type = "text";
+	    y.style.color = "#ac9e12";
 	  } else {
 	    x.type = "password";
+	    y.style.color = "#dbdbdb";
 	  }
 	}
 </script>

@@ -1,54 +1,58 @@
 body {
-	background-image: url(../img/Melee.jpg); /* Background image location */
+	background-image 	  : url(../img/Melee.jpg); /* Background image location */
 	background-position   : center center; /* Centered background*/
 	background-repeat     : no-repeat; /* Background image will not repeat */
 	background-attachment : fixed; /* background image will be fixed  */
-  background-size       : cover; /* auto-resizable background (depending on resolution*/
+  	background-size       : cover; /* auto-resizable background (depending on resolution*/
 	font-family           : 'Michroma', sans-serif;
-  letter-spacing        : 1px;
-  font-size             : 12px; /* Small font size so it'll be readable on small resolutions */
+  	letter-spacing        : 1px;
+  	margin 				  : 0;
+  	font-size             : 12px; /* Small font size so it'll be readable on small resolutions */
 }
 .content{
-  margin                : 10% auto 0;
-	width                 : 300px;
+  	margin                : 10% auto 0;
+	width                 : 400px;
 	padding               : 15px 15px 5px 15px;
-	background-color      : #2e2e2e;
-  color                 : #ffeb19;
-  font-size             : 12px;
+	background-color      : rgb(0, 0, 0, 0.8);
+  	color                 : #ffeb19;
+  	font-size             : 14px;
   /* Border */
 	border                : 1px solid black;
-  border-radius         : 10px;
+  	border-radius         : 10px;
 	box-shadow            : inset 0px 0px 37px -19px rgba(0,0,0,1);
 	-webkit-box-shadow    : inset 0px 0px 37px -19px rgba(0,0,0,1);
 	-moz-box-shadow       : inset 0px 0px 37px -19px rgba(0,0,0,1);
 }
 .logo img:hover{
-  transform             : scale(1.05);
+  	transform             : scale(1.05);
 }
 .logo img{
 	text-align            : center;
-	padding               : 10px;
-	max-width             : 50px;
-	max-height            : 50px;
+	max-width             : 52px;
+	max-height            : 52px;
+	padding 			  : 10px;
+	margin-left 	      : 9px;
 }
 .center-content{
-	margin                : 10px 0 0 0;
+	margin                : 30px 0 0 0;
 	text-align            : center;
 }
 .btn{
+	font-family           : 'Michroma', sans-serif;
 	border-radius         : 3px;
 	display               : inline-block;
-	padding               : 8px 5px;
+	padding               : 10px 20px;
 	text-decoration       : none;
 	width                 : auto;
-}
-.btn-black{
-	background-color      : #222;
+	word-spacing 		  : 3px;
+	background-color      : #ac9e12;
 	color                 : #ddd;
+	cursor 				  : pointer;
+	border 				  : rgb(0, 0, 0, 0);
+	outline 			  : none;
 }
-.btn-black:hover{
-	background-color      : #333;
-	transform             : scale(1.05);
+.btn:hover{
+	transform             : scale(1.1);
 	text-shadow           : none;
 	box-shadow            : none;
 }
@@ -69,9 +73,9 @@ body {
 	color                 : #ffeb19;
 }
 .helptext{
-	color                 : #ac9e12;
+	color                 : #dbdbdb;
 	display               : block;
-	font-size             : 10px;
+	font-size             : 9px;
 	margin                : 5px 0 10px 0;
 }
 label{
@@ -85,8 +89,49 @@ li{
 }
 h1{
 	margin                : 10px 0;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
 }
-input{
-  width: 250px;
-  margin: 1px;
+input[type=text],
+input[type=email],
+input[type=password],
+input:focus{
+	color: #fff;
+  	width: 350px;
+  	margin: 1px;
+  	border: none;
+  	border-bottom: 2px solid #ac9e12;
+  	background-color      : rgb(0, 0, 0, 0);
+  	outline: none
+}
+button{
+	background-color      : rgb(0, 0, 0, 0);
+	background-color      : rgb(0, 0, 0, 0);
+	border: 1px solid rgb(0, 0, 0, 0);
+	outline: none;
+	color: #dbdbdb;
+	cursor: pointer;
+}
+button:hover{
+	font-size: 16px;
+	padding: 0 5px;
+}
+hr{
+	margin: 10px 0px;
+}
+.login:link,
+.login:visited,
+.login:active,
+.login:hover{
+  color: #ccc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 80px;
+}
+.login:hover{
+  color: #fff;
+  font-size: 15px;
+  margin-left: 75px;
 }

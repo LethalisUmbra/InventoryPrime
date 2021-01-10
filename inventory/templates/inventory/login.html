@@ -31,13 +31,18 @@
 					<input type="password" class="field" placeholder="*******" name="password"> <br/>
 				</div>
 
-				<div class="register_container">
-					<a class="register" href="{% url 'register' %}">Sign Up</a>
-				</div>
+
 
 				<p class="center-content">
 					<input type="submit" class="btn btn-black" value="Login" name="login_btn"> <br/><br/>
 				</p>
+
+				<hr>
+
+				<div class="register_container">
+					<a class="register" href="{% url 'register' %}">Sign Up</a>
+				</div>
+
 			{% endif %}
 		</form>
 	</div>
