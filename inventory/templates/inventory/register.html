@@ -52,6 +52,14 @@
 			    <p class="center-content">
 					<input type="submit" class="registerbtn btn btn-black" value="Sign me up" name="register_btn"> <br/><br/>
 				</p>
+				{% if messages %}
+			        {% for message in messages %}
+			        <div class="alert">
+			          <span class="closebtn" style="cursor: pointer;" onclick="this.parentElement.style.display='none';">&times;</span>
+			          {{ message }}
+			        </div>
+			       {% endfor %}
+			    {% endif %}
 				<hr>
 				<a href="{% url 'login' %}" class="login">Already have an account.</a>
 			{% endif %}

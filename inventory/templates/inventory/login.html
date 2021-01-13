@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-
 </head>
 <body>
 	<a class="logo" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
@@ -22,7 +21,7 @@
 				<p>Username:</p>
 				<div class="field-container">
 					<i class="fa fa-user-circle icono" aria-hidden="true"></i>
-					<input type="text" class="field" placeholder="username" name="username"> <br/>
+					<input type="text" class="field" placeholder="Username" name="username"> <br/>
 				</div>
 
 				<p>Password:</p>
@@ -31,11 +30,18 @@
 					<input type="password" class="field" placeholder="*******" name="password"> <br/>
 				</div>
 
-
-
 				<p class="center-content">
 					<input type="submit" class="btn btn-black" value="Login" name="login_btn"> <br/><br/>
 				</p>
+
+				{% if messages %}
+			        {% for message in messages %}
+			        <div class="alert">
+			          <span class="closebtn" style="cursor: pointer;" onclick="this.parentElement.style.display='none';">&times;</span>
+			          {{ message }}
+			        </div>
+			       {% endfor %}
+			    {% endif %}
 
 				<hr>
 
@@ -46,5 +52,8 @@
 			{% endif %}
 		</form>
 	</div>
+
+
+
 </body>
 </html>

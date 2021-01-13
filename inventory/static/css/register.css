@@ -135,3 +135,16 @@ hr{
   font-size: 15px;
   margin-left: 75px;
 }
+
+
+.alert{
+  background-color: rgb(100,0,0,0.5);
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.closebtn{
+  color: white;
+  padding: 3px;
+}
