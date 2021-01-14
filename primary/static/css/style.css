@@ -1,0 +1,22 @@
+body {
+	margin                : 0;
+	padding               : 0;
+	font-family           : 'Michroma', sans-serif;
+  background-color      : #2e2e2e;
+  background-image      : url(../img/Orphix.jpg);
+  background-position   : top;
+  background-position-y : 50px;
+  background-size       : 100%;
+  background-repeat     : no-repeat;
+  background-attachment : fixed;
+}
+
+/*** *{
+  cursor: url(../img/puntero_dorado.png), auto;
+} ***/
+
+@media screen and (max-width: 1400px){
+  body {
+    background-position-y : 30px;
+  }
+}

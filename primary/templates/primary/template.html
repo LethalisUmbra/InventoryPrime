@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><link rel="icon" type="image/ico" href="{% static 'img/icon/favicon.ico' %}?v=<?php echo(rand()); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% block title %}<title>TurboSports</title>{% endblock %}
+		<!-- CSS -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="{% static 'css/navbar.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="{% static 'css/home.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="{% static 'css/dropdown_profile.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="{% static 'css/dropdown_category.css' %}?v=<?php echo(rand()); ?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+		<!-- Scripts -->
+	<script src="{% static 'js/dropdown.js' %}?v=<?php echo(rand()); ?>"></script>
+</head>
+<body>
+
+	<div id="navbar">
+	  	<li class="logo_container">
+	  		<a class="logo" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category">PRIMARY
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  		<div class="dropdown dropcat dropcat_primary">
+				<hr class="separator">
+				<a class="drop_btn btn_cat" href="">Bow</a>
+				<a class="drop_btn btn_cat" href="">Rifle</a>
+				<a class="drop_btn btn_cat" href="">Shotgun</a>
+				<a class="drop_btn btn_cat" href="">Sniper</a>
+				<a class="drop_btn btn_cat" href="">Zhuge</a>
+			</div>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category">SECONDARY
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  		<div class="dropdown dropcat dropcat_secondary">
+				<hr class="separator">
+				<a class="drop_btn btn_cat" href="">Ballista</a>
+				<a class="drop_btn btn_cat" href="">AK</a>
+				<a class="drop_btn btn_cat" href="">Dual</a>
+				<a class="drop_btn btn_cat" href="">Thrown</a>
+				<a class="drop_btn btn_cat" href="">Shotgun Sidearm</a>
+				<a class="drop_btn btn_cat" href="">Pistol</a>
+			</div>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category">MELEE
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category" href="">WARFRAME
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category" href="">COMPANION
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li class="category_holder">
+	  		<a class="category" href="">ARCHWING
+	  			<img class="dropdownbtn" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  	</li>
+
+	  	<li class="official_page" style="float:right">
+	  		<a class="official_link" href="https://www.warframe.com">
+	  			<p class="official_text">OFFICIAL PAGE</p>
+	  			<img  class="official_img" src="{% static 'img/logo_white.png' %}">
+	  		</a>
+
+	  	</li>
+
+	  	<li class="derecha" style="float:right">
+	  		<a class="profile, contenelogin" onclick="profileFunction()">
+	  			{% if user.is_authenticated %}
+					<h4 class="profile">{{ user.username|upper }}</h4>
+				{% else %}
+					<h4 class="profile">LOGIN</h4>
+				{% endif %}
+				<img class="profileimg" src="{% static 'img/dropdown_btn.png' %}" alt="dropdown_btn">
+	  		</a>
+	  		<div id="dropdown_profile" class="dropdown-content">
+				<hr class="separator">
+				{% if user.is_authenticated %}
+					{% if user.is_superuser %}
+						<a href="http://127.0.0.1:8000/admin" class="drop_btn">Profile</a>
+					{% else %}
+						<a href="http://127.0.0.1:8000/profile" class="drop_btn">Profile</a>
+					{% endif %}
+			     	<a href="{% url 'logout' %}" class="drop_btn">Log out</a>
+			     {% else %}
+			     	<div>
+			     		<form method="POST" id="login_form">{% csrf_token %}
+							<p>USERNAME:</p>
+							<div class="field-container">
+								<i class="fa fa-user-circle icono" aria-hidden="true"></i>
+								<input type="text" class="field" placeholder="username" name="username"> <br/>
+							</div>
+
+							<p>PASSWORD:</p>
+							<div class="field-container">
+								<i class="fa fa-key fa-lg" aria-hidden="true"></i>
+								<input type="password" class="field" placeholder="*******" name="password"> <br/>
+							</div>
+
+							<div class="register_container">
+								<a class="register" href="{% url 'register' %}">Sign Up</a>
+							</div>
+
+							<p class="center-content">
+								<input type="submit" class="btn btn-black" value="LOG IN" name="login_btn"> <br/><br/>
+							</p>
+						</form>
+			     	</div>
+
+				{% endif %}
+		    </div>
+	  	</li>
+
+
+	</div>
+
+
+
+
+
+
+
+	{% block content %}
+		Body content
+	{% endblock %}
+
+	<!-- Sticky navbar -->
+	<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+		    navbar.classList.add("sticky")
+		  } else {
+		    navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

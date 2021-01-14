@@ -1,0 +1,126 @@
+/* [Dropdown Profile] */
+.dropdown {
+  display             : inline-block;
+}
+
+.dropdown-content {
+  position            : fixed;
+  top                 : 50px;
+  right               : 180px;
+  display             : none;
+  float               : right;
+  background-color    : #111;
+  min-width           : 160px;
+  box-shadow          : 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index             : 200;
+}
+.drop_btn{
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+.drop_btn:hover{
+  background-color: #333;
+}
+.show {
+  display             : block;
+}
+
+/* Login Button */
+#login_form p{
+  color: white;
+  margin-left:20px;
+}
+
+.field{
+  border: solid 1px #ccc;
+  border-radius: 0 4px 4px 0;
+  padding: 9px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.field:focus{
+  border-color: #18A383;
+}
+.center-content{
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+.field-container div{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.field-container i{
+  background-color: #eee;
+  border-radius: 4px 0 0 4px;
+  color: #888;
+  padding: 10px 10px 11px 10px;
+  border: solid 1px #ccc;
+  height: 12px;
+  margin-right: -5px;
+  margin-left: 10px;
+  vertical-align: top;
+}
+.btn{
+  border-radius: 3px;
+  display: inline-block;
+  padding: 8px 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  width: auto;
+}
+
+.btn-black{
+  color: #ddd;
+  background-color: #222;
+}
+.btn-black:hover{
+  background-color: #333;
+  transform           : scale(1.05);
+  text-shadow: none;
+  box-shadow: none;
+}
+.btn-black:active{
+  background-color: #444;
+}
+
+@media screen and (max-width: 1400px){
+  .dropdown-content {
+    top                 : 30px;
+    right               : 50px;
+    min-width           : 120px;
+  }
+  .drop_btn{
+    font-size: 8px;
+    font-weight: bold;
+    padding: 10px 10px;
+  }
+
+  /* Login Button */
+  #login_form p{
+    margin-left:5px;
+  }
+  .field{
+    font-size: 8px;
+    padding: 5px 5px;
+  }
+  .center-content{
+    margin: 10px 0 0 0;
+  }
+  .field-container i{
+    padding: 6px 7px 5px 5px;
+    height: 8px;
+    margin-left: 5px;
+  }
+  .btn{
+    font-size: 8px;
+    padding: 6px 4px;
+  }
+}
