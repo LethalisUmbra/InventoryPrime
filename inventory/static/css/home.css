@@ -1,10 +1,84 @@
 .content{
-	margin-top: 25%;
+	margin-top: -5px;
 	padding: 50px 20% 10%;
-	background-color: #fff;
+	background-color: #ececec;
 }
 footer{
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
 	vertical-align: bottom;
+	background-color: #fff;
+	padding: 10px 10% 12%;
+}
+.footer-media{
+	text-align: center;
+}
+.footer-media-image{
+	width: 34px;
+	padding: 5px;
+}
+.footer-media-link{
+	text-decoration: none;
+}
+.footer-si-support{
+	display: inline-block;
+	text-align: left;
+	padding-right: 20%;
+	float: right;
+}
+.footer-si-support h4{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0px;
+}
+.footer-si-support a,
+.footer-si-support a:link,
+.footer-si-support a:hover,
+.footer-si-support a:active,
+.footer-si-support a:visited{
+	text-decoration: none;
+	color: #959595;
+}
+.footer-si-support ul{
+	list-style-type: none;
+	padding: 0;
+}
+.footer-si-support li{
+	padding: 3px 0;
+}
+.footer-si-info{
+	float: right;
+	margin-top: -10px;
+	width: 40%;
+}
+.consoleLogosTop{
+    margin-top: -25px;
+    width: 125%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.consoleLogosTop img,
+.consoleLogosBot img{
+    margin-right: 5px;
+    position: relative;
+}
+.consoleLogosBot {
+    margin-top: 6px;
+    margin-bottom: -1px;
+}
+.esrbTerms p {
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+}
+.termsContain{
+ width: 63%;
 }
 h2{
 	color: #ac9e12;
@@ -20,4 +94,14 @@ h2{
 }
 .category_link:visited{
 	color: #ac9e12;
+}
+
+@media screen and (max-width: 1400px){
+	.termsContain{
+		width: 100%;
+	}
+	.footer-si-info{
+		float: right;
+		width: 80%;
+	}
 }

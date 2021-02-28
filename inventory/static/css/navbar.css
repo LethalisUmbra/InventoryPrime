@@ -7,6 +7,7 @@
   background-color      : #111;
   height                : 50px;
   font-size             : 12px;
+  z-index: 1;
 }
 
 #navbar li {

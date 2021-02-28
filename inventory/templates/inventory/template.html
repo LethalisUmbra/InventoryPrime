@@ -20,7 +20,7 @@
 </head>
 <body>
 
-	<div id="navbar">
+	<div id="navbar" class="sticky">
 	  	<li class="logo_container">
 	  		<a class="logo" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
 	  	</li>
@@ -136,30 +136,81 @@
 
 	</div>
 
+	<video class="background_video" width="100%" height="100%" autoplay loop oncontextmenu="return false;">
+	  <source src="{% static 'video/OctaviaPrime.webm' %}" type="video/webm">
+	</video>
 
-
-
-
-
+	<div class="prime_content">
 
 	{% block content %}
 		Body content
 	{% endblock %}
 
-	<!-- Sticky navbar -->
-	<script>
-		window.onscroll = function() {myFunction()};
+	<footer>
+		<div class="footer-media">
+			<a class="footer-media-link" href="https://www.facebook.com/AnibalCD">
+				<img class="footer-media-image" src="{% static 'img/fb.png' %}">
+			</a>
+			<a class="footer-media-link" href="https://twitter.com/LethalisUmbra">
+				<img class="footer-media-image" src="{% static 'img/twitter.png' %}">
+			</a>
+			<a class="footer-media-link" href="https://youtube.com/LethalisUmbra">
+				<img class="footer-media-image" src="{% static 'img/yt.png' %}">
+			</a>
+			<a class="footer-media-link" href="https://instagram.com/LethalisUmbra">
+				<img class="footer-media-image" src="{% static 'img/insta.png' %}">
+			</a>
+			<a class="footer-media-link" href="https://twitch.tv/LethalisUmbra">
+				<img class="footer-media-image" src="{% static 'img/twitch.png' %}">
+			</a>
+		</div>
 
-		var navbar = document.getElementById("navbar");
-		var sticky = navbar.offsetTop;
+		<div class="footer-si">
+			<div class="footer-si-info" style="float: right;">
+				<div class="consoleLogosTop">
+                    <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/pcLogo.png" alt="pc logo">
+                    <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/PS4logo.png" alt="ps4 logo">
+                    <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/PS5Logo.png" alt="ps5 logo">
+                    <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/switch.jpg" alt="switch logo" style="top: 25px; left: 7.5px;">
+                </div>
+                <div class="consoleLogosBot">
+                    <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/XB1Logo.png" alt="xbox 1 logo">
+                    <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/XBSXLogo.png" alt="xbox XS logo">
+                </div>
+                <div class="esrbTerms" style="margin-top: 10px">
+                    <div class="termsContain" style="margin-left: -5px;">
+                        <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/mesrb2.jpg" alt="esrb logo">
+                        <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/DELogo.jpg" alt="digital extremes logo">
+                        <div style="display: inline-block;">
+                            <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/evo.png" style="max-width: 150px; display: block;" alt="">
+                            <img src="//n9e5v4d8.ssl.hwcdn.net/images/footer/nvidia.png" style="position: relative; left: 7.5px;" alt="nvidia logo" >
+                        </div>
+                    </div>
+                    <div class="termsContain">
+                        <p>©2021 Warframe Prime SA. All rights reserved.</p>
+                        <p>Warframe, the Warframe logo, and Evolution Engine are registered trademarks of Digital Extremes Ltd.</p>
+                        <p>“PlayStation Family Mark“, “PlayStation”, “PS5 logo”, “PS5“, “PS4 logo”, “PS4“, “PlayStation Shapes Logo” and “Play Has No Limits“ are registered trademarks or trademarks of Sony Interactive Entertainment Inc.</p>
+                        <p>Nintendo Switch is a trademark of Nintendo.</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+			</div>
 
-		function myFunction() {
-		  if (window.pageYOffset >= sticky) {
-		    navbar.classList.add("sticky")
-		  } else {
-		    navbar.classList.remove("sticky");
-		  }
-		}
-	</script>
+			<div class="footer-si-support">
+				<h4>SUPPORT</h4>
+				<ul>
+					<li><a href="/FAQ">FAQ</a></li>
+					<li><a href="/FAQ">Support</a></li>
+					<li><a href="/FAQ">Terms of Use</a></li>
+					<li><a href="/FAQ">Privacy Policy</a></li>
+					<li><a href="/FAQ">EULA</a></li>
+				</ul>
+			</div>
+
+
+		</div>
+
+	</footer>
+
 </body>
 </html>

@@ -1,9 +1,20 @@
 .container{
-	margin-top: 25%;
+	margin-top: -5px;
 	padding: 50px 20% 10%;
-	background-color: #fff;
+	background-color: #ececec;
 }
 h1{
 	color: #ac9e12;
 	font-size: 20px;
+}
+.category_link:link{
+	color: #ac9e12;
+	text-decoration: none;
+}
+.category_link:hover,
+.category_link:active{
+	color: #665e00;
+}
+.category_link:visited{
+	color: #ac9e12;
 }
